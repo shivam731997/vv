@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Proposal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: url('IMG_1617.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .response-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        #no-button {
+            position: relative;
+        }
+        .mind-text {
+            font-size: 23px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function sayYes() {
+            document.querySelector(".content").innerHTML = "<h1 style='font-size: 50px; margin-top: 0;'>Yay! ❤️ You made me the happiest person!</h1>";
+        }
+        function moveNoButton() {
+            let noButton = document.getElementById("no-button");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            noButton.style.position = "absolute";
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <h1>You've stolen a pizza my heart. 🍕❤️</h1>
+        <h2>Will you do the honours to be my valentine?</h2>
+        <div class="response-buttons">
+            <button class="button" onclick="sayYes()">Yes</button>
+            <button class="button" id="no-button" onmouseover="moveNoButton()">No</button>
+        </div>
+        <p class="mind-text">Here are some things that can help make your mind 🙈</p>
+        <div class="nav-buttons">
+            <a href="page1.html" class="button">10 Reasons I Love You</a>
+            <a href="page2.html" class="button">5 Reasons You Should Go Out with Me</a>
+        </div>
+    </div>
+    <audio control autoplay>
+        <source src="Ishq Hai - (Raag.Fm).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
